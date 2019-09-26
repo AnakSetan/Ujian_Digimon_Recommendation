@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Cari Digimon Favorit</title>
+    <style>
+    body {
+        background-image: url("https://images.wallpaperscraft.com/image/ocean_tropical_palm_coast_sunset_sky_96893_1920x1080.jpg");
+       }
+    h1{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: whitesmoke
+    }
+    </style>
+    <p>Date/Time: <span id="datetime"></span></p>
+
+    <script>
+    var dt = new Date();
+    document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+    </script>
+</head>
+<body>
+    <center>
+    <h1><b>Insert Your Fav. Digimon</b></h1>
+    <form method='POST' action='http://localhost:5000/CariDigimon'>
+        <input type='text' name='digimon' placeholder="Ketik nama Digimon.."/>
+        <input class="waves-effect waves-light btn-large" type='submit' value='Search'/>
+    </form>
+    </center>
+</body>
+</html>

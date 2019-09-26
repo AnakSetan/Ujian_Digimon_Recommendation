@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Cari Digimon Favorit</title>
+    <style>
+    body {
+        background-image: url("https://images.wallpaperscraft.com/image/ocean_tropical_palm_coast_sunset_sky_96893_1920x1080.jpg");
+        background-position: center top; 
+        }
+    h2{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: whitesmoke
+    }
+    </style>
+</head>
+<body>
+    <center>
+    <h2>Digimon Favoritmu</h2>
+    <img src="{{favorit['Pic']}}" alt="Gambar digimon"><br>
+    Nama : {{favorit['Nama'].capitalize()}}
+    Stage : {{favorit['Stage']}}
+    Type : {{favorit['Type']}}
+    Attribute : {{favorit['attribute']}}<br>
+    <h2>Our Recommended</h2>
+    <ul>
+        {% for item in rekomen %}
+        <img src="{{item['gambar']}}" alt="Gambar digimon"><br>
+        <h4>Nama : {{ item['Nama'] }}</h4><br>
+        Stage : {{ item['stage'] }}
+        Type : {{ item['Type'] }}
+        Attribute : {{ item['attribute'] }}<br>
+        {% endfor %}
+    </ul>
+    <form action="http://localhost:5000/">
+        <button type="submit">Back</button>
+    </form>
+</center>
+
+</body>
+</html>
